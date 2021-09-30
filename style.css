@@ -96,109 +96,47 @@ img {
     vertical-align: middle;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.slider {
+  .video {
+    min-height: 85vh;
     position: relative;
-    overflow: hidden;
-    height: 100vh;
-    width: 100vw;
-}
+    display: grid;
+    place-items: center;
+  }
 
-.slide {
+  .video-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 85%;
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-}
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
 
-.slide.current {
-    opacity: 1;
-}
-
-.slide .content {
+  .video::after {
+    content: "";
     position: absolute;
-    bottom: 70px;
-    left: -550px;
-    opacity: 0;
-    width: 600px;
-    color: #F27405;
-    padding: 35px;
-    font-size: 2rem;
-}
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+  }
 
-.slide .content h1 {
-    margin-bottom: 10px;
-    font-weight: bold;
-}
+  .video h1 {
+      font-size: 60px;
+      position: absolute;
+      padding: 10px;
+      font-weight: 500;
+      width: 50%;
+      height: 50%;
+      top: 20%;
+      left: 10%;
+  }
 
-.slide.current .content {
-    opacity: 1;
-    transform: translateX(600px);
-    transition: all 0.7s ease-in-out 0.3s;
-}
-
-.buttons-slider button#next {
-    position: absolute;
-    top: 50%;
-    right: 15px;
-}
-
-.buttons-slider button#prev {
-    position: absolute;
-    top: 50%;
-    left: 15px;
-}
-
-.buttons-slider button {
-    border: 2px solid #F27405;
-    background-color: transparent;
-    color: #fff;
-    cursor: pointer;
-    padding: 13px 15px;
-    outline: none;
-}
-
-.buttons-slider button:hover {
-    background-color: #F27405;
-    color: #000;
-}
-
-@media(max-width: 500px) {
-    .slide .content {
-        bottom: -300px;
-        left: 0;
-        width: 100%;
-        font-size: 1.7rem;
+  @media screen and (max-width: 600px) {
+    .video h1 {
+      font-size: 50px;
     }
-
-    .slide.current .content {
-        transform: translateY(-300px);
-    }
-}
-
-.slide:first-child {
-    background: url('./imagens/vista-prédios-cidade.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
-
-.slide:nth-child(2) {
-    background: url('./imagens/prédios-2.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
-
-.slide:nth-child(3) {
-    background: url('./imagens/prédios-3.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
-
+  }

@@ -242,84 +242,133 @@ img {
     bottom: 10%;
 }
 
+/*CTA*/
 
-
-
-
-
-
-
-
-
-
-
-/*
-
-  .section-services .services {
-      flex-direction: column;
-      text-align: center;
-      margin: 0 auto;
-      padding: 30px;
-  }
-
-  .section-services {
-      height: 100vh;
-      display: block;
-      justify-content: center;
-      align-items: center;
-  }
-
-  .our-services {
-      width: 50%;
-      height: 50%;
-      float: left;
-      position: relative;
-      padding-right: 10px;
-  }
-
-  .our-services h1 {
-      font-size: 2.5rem;
-      font-weight: 300;
-      color: #000;
-      margin-bottom: 10px;
-      margin-top: 150px;
-      text-transform: uppercase;
-      letter-spacing: .2rem;
-      text-align: center;
-  }
-
-  .our-services p {
-    font-size: 1.3rem;
-    font-weight: 300;
-    color: #000;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: .2rem;
-    justify-content: flex-start;
-    margin-left: 15px;
-  }
-
-  
-
-  .services-text {
-      flex-direction: column;
-      text-align: center;
-      max-width: 1500px;
-      margin: 0 auto;
-      padding: 50px 0;
-      width: 50%;
-      float: right;
-  }
-
-.text-cards {
-    font-size: 1rem;
-    color: #000;
-    margin-bottom: 10px;
-    text-transform: capitalize;
-    letter-spacing: .2rem;
-    justify-content: flex-start;
-    margin-left: 15px;
-    padding: 10px;
+.action {
+    padding-top: 15px;
+    display: flex;
+    height: 30vh;
+    flex-basis: 100%;
+    position: relative;
 }
 
-*/
+.text-action {
+    position: absolute;
+    top: 50px;
+    bottom: 50px;
+    left: 25%;
+    right: 25%;
+}
+
+
+.text-action h2 {
+    font-size: 1.7rem;
+    font-weight: 300;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+.text-action h2 span {
+    color: #F27405;
+    font-weight: 600;
+}
+
+.text-action button {
+    font-size: 1rem;
+    color: #F27405;
+    font-weight: 400;
+    background-color: white;
+    text-transform:uppercase;
+    letter-spacing: .2rem;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-color: #F27405;
+}
+
+.text-action button:hover {
+    color: black;
+    background-color: #F27405;
+}
+
+/*Formulário*/
+
+.form {
+    padding-top: 15px;
+    display: flex;
+    height: 100vh;
+    flex-basis: 100%;
+}
+
+.form-left {
+    flex: 50%;
+    position: relative;
+}
+
+.form-right {
+    flex: 50%;
+    position: relative;
+}
+
+.form-left form {
+    position:absolute;
+    top: 50%;
+    left: 25%;
+    right: 25%;
+    transform: translateY(-50%);
+}
+
+.form-right h2 {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    right: 25%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #F27405;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+.form-left:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    border-right: 1px solid #F27405;
+    height: 90vh;
+    top: 10%;
+    bottom: 10%;
+}
+
+.form-control input {
+    height: 50px;
+    margin: 10px;
+    width: 500px;
+    border-radius: 5px;
+    font-size: 100%;
+}
+
+
+input[name^="message"] {
+    height: 150px;
+    padding-bottom: 100px;
+    font-size: 100%;
+}
+
+input[type="submit"] {
+    height: 50px;
+    width: 150px;
+    font-size: 100%;
+    border-radius: 5px;
+    border-color: #F27405;
+    background-color: white;
+    text-transform: uppercase;
+    color: #F27405;
+}

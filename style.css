@@ -223,7 +223,7 @@ img {
     transform: translateY(-50%);
 }
 
-.list-texts p {
+.list-texts li {
     font-size: 1.2rem;
     color: black;
     margin-bottom: 10px;
@@ -258,6 +258,7 @@ img {
     bottom: 50px;
     left: 25%;
     right: 25%;
+    padding: 20px;
 }
 
 
@@ -289,6 +290,7 @@ img {
     left: 50%;
     transform: translateX(-50%);
     border-color: #F27405;
+    border-style: solid;
 }
 
 .text-action button:hover {
@@ -317,24 +319,56 @@ img {
 
 .form-left form {
     position:absolute;
+    top: 55%;
+    left: 20%;
+    right: 20%;
+    transform: translateY(-50%);
+}
+
+.form-text {
+    position:absolute;
     top: 50%;
-    left: 25%;
-    right: 25%;
+    right: 10%;
+    left: 10%;
     transform: translateY(-50%);
 }
 
 .form-right h2 {
-    position: absolute;
-    top: 50%;
-    left: 25%;
-    right: 25%;
-    transform: translateY(-50%);
     font-size: 2.5rem;
     font-weight: 300;
     color: #F27405;
     text-transform: uppercase;
     letter-spacing: .2rem;
     text-align: center;
+}
+
+.form-right p {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: gray;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+.pelotas h4 {
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 10px;
+}
+
+.porto-alegre h4 {
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 10px;
+}
+
+.pelotas p {
+    font-size: 1rem;
+}
+
+.porto-alegre p {
+    font-size: 1rem;
 }
 
 .form-left:after {
@@ -353,8 +387,27 @@ img {
     width: 500px;
     border-radius: 5px;
     font-size: 100%;
+    background: transparent;
+    border-style: solid;
+    font-weight: normal;
+    font-family: 'Lato', sans-serif;
+    padding-left: 2px;
 }
 
+.form-control textarea {
+    margin: 10px;
+    width: 500px;
+    border-radius: 5px;
+    font-size: 100%;
+    background: transparent;
+    border-style: solid;
+    border-width: 2px;
+    padding-top: 10px;
+    font-weight: normal;
+    font-family: 'Lato', sans-serif;
+    padding-right: 2px;
+    padding-left: 2px;
+}
 
 input[name^="message"] {
     height: 150px;
@@ -371,4 +424,10 @@ input[type="submit"] {
     background-color: white;
     text-transform: uppercase;
     color: #F27405;
+    border-style: solid;
+}
+
+input[type="submit"]:hover {
+    color: black;
+    background-color: #F27405;
 }

@@ -174,7 +174,6 @@ img {
 /*Serviços*/
 
 .services {
-    padding-top: 15px;
     display: flex;
     height: 100vh;
     flex-basis: 100%;
@@ -296,6 +295,46 @@ img {
 .text-action button:hover {
     color: black;
     background-color: #F27405;
+}
+
+/*Sobre*/
+
+.about {
+    display: flex;
+    height: 90vh;
+    flex-basis: 100%;
+}
+
+.text-about {
+    flex: 50%;
+    position: relative;
+}
+
+.img-about {
+    flex: 50%;
+    position: relative;
+}
+
+.text-about h4 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color:#F27405;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+    position:absolute;
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+}
+
+.img-about img {
+    width: 100%;
+    position:absolute;
+    top: 50%;
+    right: 10%;
+    left: 5%;
+    transform: translateY(-50%);
 }
 
 /*Formulário*/
@@ -431,3 +470,94 @@ input[type="submit"]:hover {
     color: black;
     background-color: #F27405;
 }
+
+/*Imagem div*/
+
+.div-img {
+    padding-top: 15px;
+    display: flex;
+    height: 50vh;
+    flex-basis: 100%;
+    position: relative;
+}
+.image {
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.image img {
+    width: 75%;
+}
+
+/*Visite-nos*/
+
+.map-section {
+    padding-top: 15px;
+    display: flex;
+    height: 100vh;
+    flex-basis: 100%;
+}
+
+.address {
+    flex: 50%;
+    position: relative;
+}
+
+.map {
+    flex: 50%;
+    position: relative;
+}
+
+.address-text {
+    position:absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+}
+
+.google-maps {
+    position:absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+.address-text h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #F27405;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+.address-text h4 {
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 10px;
+}
+
+.address-text p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: gray;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+.address:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    border-right: 1px solid #F27405;
+    height: 90vh;
+    top: 10%;
+    bottom: 10%;
+}
+
+
+

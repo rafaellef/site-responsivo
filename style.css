@@ -10,6 +10,7 @@ body {
     font-family: 'Lato', sans-serif;
     color: #F27405;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 ul {
@@ -47,6 +48,7 @@ img {
 .navbar a {
     padding: 10px;
     margin: 0 5px;
+    font-size: 1.2rem;
 }
 
 .navbar a:hover {
@@ -62,25 +64,6 @@ img {
     margin: 0 auto;
     overflow: auto;
     padding: 0 40px;
-}
-
-.card {
-    background-color: #fff;
-    color: #F27405;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    margin: 10px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 30px;
-    cursor: pointer;
-    background: #F27405;
-    color: black;
-    border: none;
-    border-radius: 5px;
 }
 
 .flex {
@@ -560,4 +543,71 @@ input[type="submit"]:hover {
 }
 
 
+.navbar-footer {
+    background-color: #F2F2F2;
+    height: 150px;
+    margin-top: 50px;
+}
 
+.navbar-footer ul {
+    display: flex;
+}
+
+.navbar-footer a {
+    padding: 10px;
+    margin: 0 5px;
+    font-size: 1.2rem;
+}
+
+.navbar-footer a:hover {
+    border-bottom: 2px #F27405 solid;
+}
+
+.navbar-footer .flex {
+    justify-content: space-between;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.logo-footer img {
+    width: 50%;
+    height: 50%;
+}
+
+
+
+
+
+
+
+
+/*.card {
+    background-color: #fff;
+    color: #F27405;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: #F27405;
+    color: black;
+    border: none;
+    border-radius: 5px;
+}*/

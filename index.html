@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <title>Vivo Condomínios</title>
 </head>
 <body>
@@ -29,7 +31,7 @@
     
 
     <section class="about" id="about">
-        <div class="text-about">
+        <div class="text-about" data-aos="fade-right" data-aos-delay="150">
             <h4>Acreditamos numa atuação abrangente, humana e com ferramentas inovadoras que sejam capazes de proporcionar uma gestão mais transparente e colaborativa.</h4>
         </div>
         <div class="img-about">
@@ -44,7 +46,7 @@
                 <p>Somos uma empresa especializada na administração e gestão de condomínios.</p>
             </div>
         </div>
-        <div class="services-texts">
+        <div class="services-texts" data-aos="fade-left" data-aos-delay="150">
             <div class="list-texts">
                 <ul>
                     <li>Síndico profissional e administrador.</li>
@@ -59,7 +61,7 @@
     <section class="action">
         <div class="text-action">
             <h2>Conheça o jeito <span>Vivo</span> de administrar condomínios</h2>
-            <button>Solicite sua proposta</button>
+            <a href="#contact">Solicite sua proposta</a>
         </div>
     </section>
 
@@ -91,12 +93,12 @@
                 <h2>Contato</h2>
                 <p>Deixe sua mensagem preenchendo o formulário ou entre em contato por nossos telefones</p>
                 <div class="phone">
-                    <div class="pelotas">
+                    <div class="pelotas" data-aos="fade-up" data-aos-anchor-placement="top">
                         <h4>Pelotas</h4>
                         <p>(53) 3271-8698</p>
                         <p>(51) 99670-4033 WhatsApp</p>
                     </div>
-                    <div class="porto-alegre">
+                    <div class="porto-alegre" data-aos="fade-up" data-aos-anchor-placement="top">
                         <h4>Porto Alegre</h4>
                         <p>(51) 3060-9617 e (51) 3060-9317</p>
                         <p>(51) 98028-2019 WhatsApp</p>
@@ -116,10 +118,14 @@
         <div class="address">
             <div class="address-text">
                 <h2>Visite-nos</h2>
+                <div data-aos="fade-up" data-aos-anchor-placement="top">
                 <h4>Pelotas</h4>
                 <p>Rua Visconde de Ouro Preto, nº 238</p>
+                </div>
+                <div data-aos="fade-up" data-aos-anchor-placement="top">
                 <h4>Porto Alegre</h4>
                 <p>Rua Coronel Genuíno, nº 206, Loja 7</p>
+                </div>
             </div>
         </div>
         <div class="map">
@@ -135,9 +141,9 @@
                 <h1 class="logo-footer"><img src="/imagens/logo-vivo.png" alt="logo"></h1>
                 <nav>
                     <ul>
-                        <li><a href="about.html">Quem somos</a></li>
-                        <li><a href="services.html">Serviços</a></li>
-                        <li><a href="contact.html">Contato</a></li>
+                        <li><a href="#about">Quem somos</a></li>
+                        <li><a href="#services">Serviços</a></li>
+                        <li><a href="#contact">Contato</a></li>
                         <li><a href="https://app.condomob.net/" target="_blank">2ª Via Boleto</a></li>
                     </ul>
                 </nav>
@@ -147,5 +153,10 @@
 
 
     <script src="app.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>

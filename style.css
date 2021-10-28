@@ -132,11 +132,24 @@ img {
     100% {opacity:1;}
   }
 
-@media screen and (max-width: 800px) {
-    .showcase h1 {
+  @media screen and (max-width: 1000px) {
+    .showcase h1:not(.logo) {
       font-size: 50px;
     }
   }
+
+@media screen and (max-width: 800px) {
+    .showcase h1:not(.logo) {
+      font-size: 45px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .showcase h1:not(.logo) {
+      font-size: 40px;
+    }
+  }
+  
 
 .showcase ul {
     display: flex;
@@ -153,6 +166,63 @@ img {
     border-bottom: 2px #F27405 solid;
 }
 
+.hamburguer {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 35px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #F27405;
+}
+
+@media (max-width: 1000px) {
+    .showcase ul {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+        0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .showcase ul.active {
+        left: 0;
+    }
+
+    .showcase li {
+        margin: 2.5rem 0;
+    }
+
+    .hamburguer {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburguer.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburguer.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+        position: fixed;
+    }
+
+    .hamburguer.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        position: fixed;
+    }
+
+}
 
 /*Sobre*/
 
@@ -179,19 +249,40 @@ img {
     text-transform: uppercase;
     letter-spacing: .2rem;
     text-align: center;
-    position:absolute;
+    position: absolute;
     top: 50%;
-    left: 15%;
+    left: 10%;
+    right: 10%;
     transform: translateY(-50%);
 }
 
 .img-about img {
     width: 100%;
-    position:absolute;
+    position: relative;
     top: 50%;
     right: 10%;
     left: 5%;
     transform: translateY(-50%);
+}
+
+@media (max-width: 800px) {
+    .text-about h4 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .about {
+        height: 50vh;
+    }
+
+    .img-about {
+        display: none;
+    }
+
+    .text-about {
+        flex: 1;
+    }
 }
 
 /*Serviços*/
@@ -264,6 +355,24 @@ img {
     bottom: 10%;
 }
 
+@media (max-width: 800px) {
+    .services {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .services-head:after {
+        display: none;
+    }
+}
+
+
+@media (max-width: 530px) {
+       .services-texts {
+           top: 5%;
+       }
+    }
+
 /*CTA*/
 
 .action {
@@ -321,6 +430,12 @@ img {
     background-color: #F27405;
 }
 
+@media (max-width: 1300px) {
+    .action {
+        display: none;
+    }
+}
+
 
 /*Formulário*/
 
@@ -342,7 +457,7 @@ img {
 }
 
 .form-left form {
-    position:absolute;
+    position: relative;
     top: 55%;
     left: 20%;
     right: 20%;
@@ -350,7 +465,7 @@ img {
 }
 
 .form-text {
-    position:absolute;
+    position: absolute;
     top: 50%;
     right: 10%;
     left: 10%;
@@ -456,6 +571,55 @@ input[type="submit"]:hover {
     background-color: #F27405;
 }
 
+@media (max-width: 1300px) {
+    .form {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .form-text {
+        position: relative;
+        justify-self: flex-start;
+        top: 75%;
+        right: auto;
+        left: auto;
+    }
+
+    .form-left {
+        order: 2;
+        top: 25%;
+    }
+
+    .form-left form {
+        justify-content: center;
+    }
+
+    .form-right {
+        order: 1;
+    }
+
+    .form-left:after {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .form-left form {
+        right: auto;
+        left: auto;
+    }
+
+    .form-control input {
+        width: 460px;
+    }
+
+    .form-control textarea {
+        width: 460px;
+    }
+}
+
+
 /*Imagem div*/
 
 .div-img {
@@ -475,6 +639,12 @@ input[type="submit"]:hover {
 
 .image img {
     width: 75%;
+}
+
+@media (max-width: 1300px) {
+    .div-img {
+        display: none;
+    }
 }
 
 /*Visite-nos*/
@@ -544,6 +714,51 @@ input[type="submit"]:hover {
     bottom: 10%;
 }
 
+@media (max-width: 1300px) {
+  .map-section {
+      flex-direction: column;
+      margin-top: 500px;
+      justify-content: flex-start;
+  }
+
+  .address:after {
+      display: none;
+  }
+
+  .address {
+      margin-top: 25px;
+      margin-bottom: 25px;
+  }
+
+  .map {
+      margin-top: 50px;
+  }
+
+  .google-maps iframe {
+      height: 400px;
+  }
+}
+
+@media (max-width: 680px ) {
+    .google-maps iframe {
+        width: 400px;
+        height: 400px;
+        margin-top: 55px;
+        margin-bottom: 65px;
+    }
+
+    .address-text {
+        left: 10%;
+        right: 10%;
+    }
+
+    .address {
+        margin-top: 45px;
+    }
+}
+
+
+/*Footer*/
 
 .navbar-footer {
     background-color: #F2F2F2;
@@ -588,7 +803,31 @@ input[type="submit"]:hover {
     height: 50%;
 }
 
+#myBtn {
+    display: none;
+    position: fixed; 
+    bottom: 50px; 
+    right: 30px; 
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    background-color:#F27405; 
+    color: black; 
+    cursor: pointer; 
+    padding: 15px; 
+    border-radius: 10px; 
+    font-size: 18px;
+}
 
+@media (max-width: 700px) {
+    #myBtn {
+        display: block;
+    }
+
+    .navbar-footer ul {
+        display: none;
+    }
+}
 
 
 
